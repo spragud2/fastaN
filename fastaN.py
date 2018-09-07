@@ -1,6 +1,15 @@
 import itertools 
 import fasta_reader as far 
 
+''' Key for itertools groupby
+    
+    Alters flag when sequence changes from annotated from unannotated or vice versa
+
+    Input: genomic sequence
+    Output: itertools groupby object
+
+    
+'''
 
 class Key(object):
     def __init__(self):
@@ -16,6 +25,19 @@ class Key(object):
         self.prev = e
         return self.flag[0]
             
-    
+
+''' fastaN
+
+Return a list of lists separating annotated from unannotated sequence 
+
+Input: String 
+Output: List of lists
+
+Output example: ['ATCG','NNNNNNNNN','AATTTTTTT','N','GCGCGC',...]
+
+'''
+
+
+
 def fastaN(fa):
     return [''.join(list(g)) for k,g in itertools.groupby(fa,key=Key())]
