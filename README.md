@@ -6,4 +6,4 @@ ie
 
 ['ATCG','NNNNNNNNN','AA','N','TAAG', ...]
 
-Useful for sequence with large unannotated regions
+Useful for sequence with large unannotated regions when you are interested in doing more than simply removing the unannotated regions
