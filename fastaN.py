@@ -1,5 +1,4 @@
 import itertools
-import fasta_reader as far
 
 ''' Key for itertools groupby
 
@@ -7,6 +6,7 @@ import fasta_reader as far
 
     Input: genomic sequence
     Output: flag: 0 or 1
+
 '''
 
 class Key(object):
