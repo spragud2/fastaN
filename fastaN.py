@@ -1,14 +1,12 @@
-import itertools 
-import fasta_reader as far 
+import itertools
+import fasta_reader as far
 
 ''' Key for itertools groupby
-    
+
     Alters flag when sequence changes from annotated from unannotated or vice versa
 
     Input: genomic sequence
-    Output: itertools groupby object
-
-    
+    Output: flag: 0 or 1
 '''
 
 class Key(object):
@@ -24,13 +22,13 @@ class Key(object):
             self.flag = self.flag[::-1]
         self.prev = e
         return self.flag[0]
-            
+
 
 ''' fastaN
 
-Return a list of lists separating annotated from unannotated sequence 
+Return a list of lists separating annotated from unannotated sequence
 
-Input: String 
+Input: String
 Output: List of lists
 
 Output example: ['ATCG','NNNNNNNNN','AATTTTTTT','N','GCGCGC',...]
